@@ -17,6 +17,13 @@ public class LoseCondition : MonoBehaviour
             SceneManager.LoadScene("SampleScene");
         }
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            SceneManager.LoadScene("SampleScene");
+        }
+    }
 
     // Update is called once per frame
     void Update()
